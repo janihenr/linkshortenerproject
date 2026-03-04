@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-geist-sans, ui-sans-serif, system-ui, sans-serif);
+  color: #e5e7eb;
+  background: #0b0f14;
+  color-scheme: dark;
+}
+
+.site-header {
+  background: #0f141b;
+  border-bottom: 1px solid #1f2937;
+}
+
+.site-header__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.site-nav > * {
+  display: inline-block;
+}
+
+.site-nav button,
+.site-nav a,
+.site-nav [role="button"],
+.site-nav div > button,
+.site-nav div > a {
+  background: #f9fafb !important;
+  color: #0b0f14 !important;
+  border: none !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  font: inherit !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.site-nav button:hover,
+.site-nav a:hover,
+.site-nav [role="button"]:hover,
+.site-nav div > button:hover,
+.site-nav div > a:hover {
+  background: #e5e7eb !important;
+}
+
+/* Clerk button styling */
+[class*="cl-button"],
+[class*="cl-signin"],
+[class*="cl-signup"],
+button[data-testid*="clerk"],
+button[class*="clerk"] {
+  background: #f9fafb !important;
+  color: #0b0f14 !important;
+  border: none !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+
+[class*="cl-button"]:hover,
+[class*="cl-signin"]:hover,
+[class*="cl-signup"]:hover,
+button[data-testid*="clerk"]:hover,
+button[class*="clerk"]:hover {
+  background: #e5e7eb !important;
+}
+
+/* Clerk user menu surface overrides */
+[class*="cl-userButtonPopoverCard"],
+[class*="cl-userButtonPopoverMain"],
+[class*="cl-userButtonPopoverFooter"],
+[class*="cl-userButtonPopoverActions"],
+[class*="cl-userButtonPopoverActionButton"],
+[class*="cl-userButtonPopoverActionButtonText"],
+[class*="cl-userButtonPopoverActionButtonIcon"],
+[class*="cl-userButtonPopoverActionButtonIconBox"],
+[class*="cl-userButtonPopoverActionButtonDivider"],
+[class*="cl-userButtonPopoverButton"],
+[class*="cl-userButtonPopoverMenuButton"],
+[class*="cl-userButtonPopover"],
+[class*="cl-popover"],
+[class*="cl-card"],
+[class*="cl-menuItem"],
+[class*="cl-menuItem"] svg,
+[class*="cl-menuItem"] path,
+[class*="cl-menuItem"] span,
+[class*="cl-profileSection"],
+[class*="cl-divider"],
+[class*="cl-footer"],
+[class*="cl-userButtonPopoverCard"] * {
+  color: #e5e7eb !important;
+  border-color: #1f2937 !important;
+}
+
+[class*="cl-userButtonPopoverCard"],
+[class*="cl-userButtonPopoverMain"],
+[class*="cl-userButtonPopoverFooter"],
+[class*="cl-userButtonPopover"],
+[class*="cl-popover"],
+[class*="cl-card"] {
+  background: #0f141b !important;
+}
+
+[class*="cl-userButtonPopoverActionButton"],
+[class*="cl-userButtonPopoverButton"],
+[class*="cl-userButtonPopoverMenuButton"],
+[class*="cl-menuItem"] {
+  background: #111827 !important;
+}
+
+[class*="cl-userButtonPopoverActionButton"]:hover,
+[class*="cl-userButtonPopoverButton"]:hover,
+[class*="cl-userButtonPopoverMenuButton"]:hover,
+[class*="cl-menuItem"]:hover {
+  background: #1f2937 !important;
+}
+
+.page-shell {
+  min-height: calc(100vh - 56px);
+  display: flex;
+  justify-content: center;
+  padding: 56px 24px 72px;
+  background: radial-gradient(circle at top, rgba(31, 41, 55, 0.4), transparent 60%);
+}
+
+.main-card {
+  width: 100%;
+  max-width: 760px;
+  background: #111827;
+  padding: 96px 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  border: 1px solid #1f2937;
+}
+
+.logo {
+  height: auto;
+}
+
+.copy-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 520px;
+}
+
+.headline {
+  font-size: 32px;
+  line-height: 1.35;
+  font-weight: 600;
+  margin: 0;
+}
+
+.subtext {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.text-link {
+  color: #e5e7eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #f9fafb;
+  color: #0b0f14;
+  border: 1px solid #f9fafb;
+}
+
+.btn-primary:hover {
+  background: #e5e7eb;
+  border-color: #e5e7eb;
+}
+
+.btn-secondary {
+  border: 1px solid #374151;
+  color: #e5e7eb;
+  background: transparent;
+}
+
+.btn-secondary:hover {
+  border-color: #4b5563;
+  color: #f9fafb;
+}
+
+@media (max-width: 720px) {
+  .main-card {
+    padding: 56px 28px;
+    gap: 48px;
+  }
+
+  .cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .page-shell {
+    padding: 40px 16px 56px;
+  }
+
+  .headline {
+    font-size: 26px;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-input {
+  padding: 12px 16px;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #f9fafb;
+  box-shadow: 0 0 0 3px rgba(249, 250, 251, 0.15);
+}
+
+.result-container {
+  margin-top: 24px;
+  padding: 16px;
+  background: #0f172a;
+  border-radius: 6px;
+  border: 1px solid #1f2937;
+}
+
+.result-label {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.result-code {
+  display: block;
+  padding: 12px;
+  background: #0b0f14;
+  border: 1px solid #1f2937;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  word-break: break-all;
+  color: #e5e7eb;
+}
